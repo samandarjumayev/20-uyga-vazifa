@@ -6,3 +6,79 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+    background-color: lightblue;
+}
+
+.main {
+    border: 2px solid black;
+    width: 600px;
+    height: 650px;
+    margin: 30px auto;
+    background-color: rgb(210, 232, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-1 {
+    border: 9px solid rgb(6, 142, 142);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.circle-2 {
+    width: 180px;
+    height: 180px;
+    border: 17px solid rgb(6, 142, 142); 
+    border-radius: 50%; 
+    margin-top: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:not-allowed;
+}
+
+.strelka {
+    background-color: rgb(6, 142, 142);
+    border-radius: 12px;
+    width: 100px;
+    height: 10px;
+    animation-name: aylanish;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.strelka::after {
+    content: "";
+    background-color: rgb(6, 142, 142);
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+
+.circle-2:hover .strelka {
+    animation-play-state: paused;
+}
+
+
+@keyframes aylanish {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main h1 {
+    color: rgb(6, 142, 142);
+    margin-top: 70px;
+}
