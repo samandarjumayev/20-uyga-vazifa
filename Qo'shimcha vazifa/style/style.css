@@ -60,8 +60,19 @@ body {
     width: 19px;
     height: 19px;
     border-radius: 50%;
+    position: absolute; 
+}
+
+.strelka::before {
+    content: "";
+    background-color: rgb(9, 255, 0);
+    width: 18px;
+    height: 12px;
     position: absolute;
-    
+    z-index: 3;
+    left: 122px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .circle-2:hover .strelka {
